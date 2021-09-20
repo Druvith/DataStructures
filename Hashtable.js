@@ -44,6 +44,15 @@ class HashTable {
     return keysArray;
 
   }
+  values() {
+    const valuesArray = [];
+    for (let i = 0; i < this.data.length; i++){
+      if (this.data[i]) {
+        valuesArray.push(this.data[i][0][1])
+      }
+    }
+    return valuesArray
+  }
 }
 
 const myHashTable =  new HashTable(50);
@@ -51,3 +60,4 @@ myHashTable.set('grapes',1000);
 myHashTable.set('apples', 54);
 myHashTable.set('oranges', 2);
 myHashTable.keys()
+myHashTable.values()
